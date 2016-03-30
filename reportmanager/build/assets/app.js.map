@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"app.js",
+"lineCount":2,
+"mappings":"A;AAIA,IAAIA,UAAYC,OAAAC,OAAA,CAAe,WAAf,CAA4B,CAC1C,SAD0C,CAE1C,mBAF0C,CAA5B,CAKhBF,UAAAG,OAAA,CAAiB,CAAC,gBAAD,CACf,QAAQ,CAACC,CAAD,CAAiB,CACvBA,CAAAC,KAAA,CACO,UADP,CACmB,CACfC,YAAa,oBADE,CAEfC,WAAY,YAFG,CADnB,CAAAF,KAAA,CAKO,OALP,CAKgB,CACVC,YAAa,oBADH,CAEVC,WAAY,YAFF,CALhB,CAAAC,UAAA,CASY,CACRC,WAAY,UADJ,CATZ,CADuB,CADV,CAAjB;",
+"sources":["app.unminified.js"],
+"names":["reportApp","angular","module","config","$routeProvider","when","templateUrl","controller","otherwise","redirectTo"]
+}

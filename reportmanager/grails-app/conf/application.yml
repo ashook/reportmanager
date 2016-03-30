@@ -9,23 +9,26 @@ hibernate:
 dataSource:
     pooled: true
     jmxExport: true
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    dbCreate: validate
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    dialect: org.hibernate.dialect.Oracle9Dialect
 
 environments:
     development:
-        dataSource:
-            dbCreate: create-drop
-            url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+        dataSource:            
+            url: jdbc:oracle:thin:@localhost:1521:MYDB1            
+            username: report_mgr
+            password: report_mgr        
     test:
-        dataSource:
-            dbCreate: update
-            url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+        dataSource:            
+            url: jdbc:oracle:thin:@localhost:1521:MYDB1            
+            username: report_mgr
+            password: report_mgr
     production:
-        dataSource:
-            dbCreate: update
-            url: jdbc:h2:./prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+        dataSource:            
+            url: jdbc:oracle:thin:@localhost:1521:MYDB1            
+            username: report_mgr
+            password: report_mgr
             properties:
                 jmxEnabled: true
                 initialSize: 5
@@ -48,7 +51,7 @@ environments:
 ---
 ---
 grails:
-    profile: rest-api
+    profile: angular
     codegen:
         defaultPackage: reportmanager
     spring:
