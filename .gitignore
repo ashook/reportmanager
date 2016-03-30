@@ -6,7 +6,8 @@
 # web application files
 /web-app/WEB-INF/classes
 
-/build/*
+/reportmanager/build/*
+/reportmanager/node_modules/*
 
 # default HSQL database files for production mode
 /prodDb.*
