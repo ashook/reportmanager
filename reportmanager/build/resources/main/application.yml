@@ -1,0 +1,112 @@
+---
+hibernate:
+    cache:
+        queries: false
+        use_second_level_cache: true
+        use_query_cache: false
+        region.factory_class: 'org.hibernate.cache.ehcache.EhCacheRegionFactory'
+
+dataSource:
+    pooled: true
+    jmxExport: true
+    dbCreate: validate
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    dialect: org.hibernate.dialect.Oracle9Dialect
+
+environments:
+    development:
+        dataSource:            
+            url: jdbc:oracle:thin:@localhost:1521:MYDB1            
+            username: report_mgr
+            password: report_mgr        
+    test:
+        dataSource:            
+            url: jdbc:oracle:thin:@localhost:1521:MYDB1            
+            username: report_mgr
+            password: report_mgr
+    production:
+        dataSource:            
+            url: jdbc:oracle:thin:@localhost:1521:MYDB1            
+            username: report_mgr
+            password: report_mgr
+            properties:
+                jmxEnabled: true
+                initialSize: 5
+                maxActive: 50
+                minIdle: 5
+                maxIdle: 25
+                maxWait: 10000
+                maxAge: 600000
+                timeBetweenEvictionRunsMillis: 5000
+                minEvictableIdleTimeMillis: 60000
+                validationQuery: SELECT 1
+                validationQueryTimeout: 3
+                validationInterval: 15000
+                testOnBorrow: true
+                testWhileIdle: true
+                testOnReturn: false
+                jdbcInterceptors: ConnectionState
+                defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+
+---
+---
+grails:
+    profile: angular
+    codegen:
+        defaultPackage: reportmanager
+    spring:
+        transactionManagement:
+            proxies: false
+info:
+    app:
+        name: 'reportmanager'
+        version: '0.1'
+        grailsVersion: '3.1.4'
+spring:
+
+    groovy:
+        template:
+            check-template-location: false
+
+---
+grails:
+    mime:
+        disable:
+            accept:
+                header:
+                    userAgents:
+                        - Gecko
+                        - WebKit
+                        - Presto
+                        - Trident
+        types:
+            all: '*/*'
+            atom: application/atom+xml
+            css: text/css
+            csv: text/csv
+            form: application/x-www-form-urlencoded
+            html:
+              - text/html
+              - application/xhtml+xml
+            js: text/javascript
+            json:
+              - application/json
+              - text/json
+            multipartForm: multipart/form-data
+            rss: application/rss+xml
+            text: text/plain
+            hal:
+              - application/hal+json
+              - application/hal+xml
+            xml:
+              - text/xml
+              - application/xml
+    urlmapping:
+        cache:
+            maxsize: 1000
+    controllers:
+        defaultScope: singleton
+    converters:
+        encoding: UTF-8
+server:
+   contextPath: /reportmanager

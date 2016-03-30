@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"controllers.js",
+"lineCount":2,
+"mappings":"A;AAIA,IAAIA,kBAAoBC,OAAAC,OAAA,CAAe,mBAAf,CAAoC,EAApC,CAExBF,kBAAAG,WAAA,CAA6B,YAA7B,CAA2C,CAAC,QAAD,CAAW,OAAX,CACzC,QAAQ,CAACC,CAAD,CAASC,CAAT,CAAgB,CACzBA,CAAAC,IAAA,CAAU,SAAV,CAAAC,QAAA,CAA6B,QAAQ,CAACC,CAAD,CAAO,CAC1CJ,CAAAK,QAAA,CAAiBD,CACdJ,EAAAM,QAAA,CAAiBN,CAAAK,QAAA,CAAe,CAAf,CAFsB,CAA5C,CAKGL,EAAAO,YAAA,CAAqBC,QAAQ,CAACC,CAAD,CAAW,CACvCZ,OAAAa,QAAA,CAAgBV,CAAAK,QAAhB,CAAgC,QAAQ,CAACM,CAAD,CAAQC,CAAR,CAAa,CAC9CH,CAAH,GAAgBE,CAAAE,GAAhB,GACDb,CAAAM,QADC,CACgBK,CADhB,CADiD,CAArD,CADuC,CANlB,CADiB,CAA3C;",
+"sources":["controllers.unminified.js"],
+"names":["reportControllers","angular","module","controller","$scope","$http","get","success","data","reports","sreport","showSummary","$scope.showSummary","reportId","forEach","value","key","id"]
+}

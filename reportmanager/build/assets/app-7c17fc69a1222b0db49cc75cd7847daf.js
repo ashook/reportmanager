@@ -1,0 +1,2 @@
+//# sourceMappingURL=app.js.map
+var reportApp=angular.module("reportApp",["ngRoute","reportControllers"]);reportApp.config(["$routeProvider",function(a){a.when("/reports",{templateUrl:"assets/report.html",controller:"ReportCtrl"}).when("/home",{templateUrl:"assets/report.html",controller:"ReportCtrl"}).otherwise({redirectTo:"/reports"})}]);

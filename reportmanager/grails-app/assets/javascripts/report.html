@@ -1,0 +1,76 @@
+<div class="container-fluid">
+	<div class="row">
+	    
+		<div class="col-sm-3 col-md-2 sidebar">
+			<div class="searchBar">Search: <input ng-model="query"></div>
+			<div class="filterOpt">
+		      	Sort by:
+		      	<select ng-model="orderProp" style="width:175px;">
+			        <option value="name" selected="true">Alphabetical</option>
+			        <option value="id">Newest</option>
+		      	</select>
+	    	</div>
+	    	<br/>
+			<ul class="nav nav-sidebar">
+				<li ng-repeat="report in reports | filter:query | orderBy:orderProp" ng:class="{'active':report.id == sreport.id}">
+					<a ng-href="" ng-click="showSummary(report.id)">{{report.name}}</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h1 class="page-header">Summary</h1>
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<tr>
+						<th>Name</th>
+						<td>{{sreport.name}}</td>
+					</tr>
+					<tr>
+						<th>Description</th>
+						<td>{{sreport.description}}</td>
+					</tr>
+					<tr>
+						<th>Business Unit</th>
+						<td>{{sreport.businessUnit}}</td>
+					</tr>
+					<tr>
+						<th>Purpose</th>
+						<td>{{sreport.purpose}}</td>
+					</tr>
+					<tr>
+						<th>Role</th>
+						<td>{{sreport.role}}</td>
+					</tr>
+					<tr>
+						<th>Type</th>
+						<td>{{sreport.type}}</td>
+					</tr>
+					<tr>
+						<th>Frequency</th>
+						<td>{{sreport.frequency}}</td>
+					</tr>
+					<tr>
+						<th>Output Format</th>
+						<td>{{sreport.outputFormat}}</td>
+					</tr>
+					<tr>
+						<th>Output Protocol</th>
+						<td>{{sreport.outputProtocol}}</td>
+					</tr>
+					<tr>
+						<th>Output Location</th>
+						<td>{{sreport.outputLocation}}</td>
+					</tr>
+					<tr>
+						<th>Input Location</th>
+						<td>{{sreport.inputLocation}}</td>
+					</tr>
+					<tr>
+						<th>ETL Tool</th>
+						<td>{{sreport.etlTool}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
