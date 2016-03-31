@@ -1,5 +1,7 @@
 ---
 hibernate:
+    jdbc:
+        use_get_generated_keys: true
     cache:
         queries: false
         use_second_level_cache: true
@@ -50,10 +52,11 @@ environments:
 
 ---
 ---
+
 grails:
     profile: angular
     codegen:
-        defaultPackage: reportmanager
+        defaultPackage: reportmanagerang
     spring:
         transactionManagement:
             proxies: false
@@ -66,7 +69,7 @@ spring:
 
     groovy:
         template:
-            check-template-location: false
+            check-template-location: false   
 
 ---
 grails:
@@ -110,3 +113,8 @@ grails:
         encoding: UTF-8
 server:
    contextPath: /reportmanager
+ldapserver:
+   url: ldap://10.38.24.11:3268/dc=mygazoo,dc=com
+   domains: mygazoo,ket
+
+

@@ -32,6 +32,7 @@
             <li><a href="#">Schedules</a></li>
             <li><a href="#">Admin</a></li>
             <li><a href="#">Help</a></li>
+            <li><a href="${createLink(controller:'access', action: 'logout')}">Logout</a></li>
           </ul>
         </div>
       </div>

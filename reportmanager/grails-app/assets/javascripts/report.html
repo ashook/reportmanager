@@ -16,6 +16,8 @@
 					<a ng-href="" ng-click="showSummary(report.id)">{{report.name}}</a>
 				</li>
 			</ul>
+			<br/>
+			<a href="#/addReport" style="color:black"><button type="button" class="btn btn-secondary">Add Report</button></a>
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			<h1 class="page-header">Summary</h1>
@@ -70,6 +72,7 @@
 						<td>{{sreport.etlTool}}</td>
 					</tr>
 				</table>
+				<a href="#/editReport/{{sreport.id}}" style="color:black"><button type="button" class="btn btn-secondary">Edit Report</button></a>
 			</div>
 		</div>
 	</div>

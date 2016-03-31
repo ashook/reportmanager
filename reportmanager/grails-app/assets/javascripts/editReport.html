@@ -1,0 +1,110 @@
+<div class="container col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<form ng-submit="save()">
+	  <div class="form-group row">
+	    <label for="name" class="col-sm-2 form-control-label">Name</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" placeholder="Name" ng-model="report.name">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="description" class="col-sm-2 form-control-label">Description</label>
+	    <div class="col-sm-5">
+	      <textarea class="form-control" rows="3" placeholder="Description" ng-model="report.description"></textarea>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="businessUnit" class="col-sm-2 form-control-label">Business Unit</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" placeholder="Business Unit" ng-model="report.businessUnit">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label class="col-sm-2">Purpose</label>
+	    <div class="col-sm-10">
+	      <div class="radio-inline">
+	        <label>
+	          <input type="radio" ng-model="report.purpose" name="purpose" id="purposeRadios1" value="Internal">
+	          Internal
+	        </label>
+	      </div>
+	      <div class="radio-inline">
+	        <label>
+	          <input type="radio" ng-model="report.purpose" name="purpose" id="purposeRadios2" value="External">
+	          External
+	        </label>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="role" class="col-sm-2 form-control-label">Role</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" placeholder="Role" ng-model="report.role">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label class="col-sm-2">Type</label>
+	    <div class="col-sm-10">
+	      <div class="radio-inline">
+	        <label>
+	          <input type="radio" ng-model="report.type" name="type" id="typeRadios1" value="Manual">
+	          Manual
+	        </label>
+	      </div>
+	      <div class="radio-inline">
+	        <label>
+	          <input type="radio" ng-model="report.type" name="type" id="typeRadios2" value="Schedule">
+	          Schedule
+	        </label>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="frequency" class="col-sm-2 form-control-label">Frequency</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" placeholder="Frequency" ng-model="report.frequency">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="outputFormat" class="col-sm-2 form-control-label">Output Format</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" placeholder="Output Format" ng-model="report.outputFormat">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="outputProtocol" class="col-sm-2 form-control-label">Output Protocol</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" placeholder="Output Protocol" ng-model="report.outputProtocol">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="outputLocation" class="col-sm-2 form-control-label">Output Location</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" placeholder="Output Location" ng-model="report.outputLocation">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="inputLocation" class="col-sm-2 form-control-label">Input Location</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" placeholder="Input Location" ng-model="report.inputLocation">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="etlTool" class="col-sm-2 form-control-label">ETL Tool</label>
+	    <div class="col-sm-5">
+	      <select class="form-control" id="etlTool" ng-model="report.etlTool">
+	        <option>Oracle Data Integrator</option>
+	        <option>Pentaho Community Edition</option>
+	      </select>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button type="submit" class="btn btn-secondary" style="color:black">Save</button>
+	      <a href="#/reports" style="color:black"><button type="button" class="btn btn-secondary">Back to Reports</button></a>
+	    </div>
+	  </div>
+	</form>
+</div>
+
+
+
