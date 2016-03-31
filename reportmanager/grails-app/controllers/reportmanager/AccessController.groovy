@@ -1,4 +1,4 @@
-package reportmanagerang
+package reportmanager
 
 import grails.core.GrailsApplication;
 
