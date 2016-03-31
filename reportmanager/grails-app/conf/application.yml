@@ -69,7 +69,7 @@ spring:
 
     groovy:
         template:
-            check-template-location: false 
+            check-template-location: false
 
 ---
 grails:
