@@ -1,5 +1,7 @@
 ---
 hibernate:
+    jdbc:
+        use_get_generated_keys: true
     cache:
         queries: false
         use_second_level_cache: true
@@ -50,6 +52,7 @@ environments:
 
 ---
 ---
+
 grails:
     profile: angular
     codegen:
@@ -110,3 +113,8 @@ grails:
         encoding: UTF-8
 server:
    contextPath: /reportmanager
+ldapserver:
+   url: ldap://10.38.24.11:3268/dc=mygazoo,dc=com
+   domains: mygazoo,ket
+
+

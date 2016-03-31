@@ -14,10 +14,14 @@ reportApp.config(['$routeProvider',
         templateUrl: 'assets/report.html',
         controller: 'ReportCtrl'
       }).
-      when('/home', {
-          templateUrl: 'assets/report.html',
-          controller: 'ReportCtrl'
-        }).
+      when('/addReport', {
+	    templateUrl: 'assets/editReport.html',
+	    controller: 'AddReportCtrl'
+	  }).
+      when('/editReport/:reportId', {
+        templateUrl: 'assets/editReport.html',
+        controller: 'EditReportCtrl'
+      }).
       otherwise({
         redirectTo: '/reports'
       });
