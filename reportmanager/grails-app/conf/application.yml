@@ -56,7 +56,7 @@ environments:
 grails:
     profile: angular
     codegen:
-        defaultPackage: reportmanagerang
+        defaultPackage: reportmanager
     spring:
         transactionManagement:
             proxies: false
