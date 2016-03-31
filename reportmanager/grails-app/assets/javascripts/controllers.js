@@ -25,9 +25,9 @@ reportControllers.controller('AddReportCtrl', [ '$scope', '$http',
 	function($scope, $http) {
 		$scope.save = function() {
 			$http.post('reports', $scope.report).success(
-					function(data, status) {
-						//
-					});
+				function(data, status) {
+					//
+				});
 		};
 	} ]);
 
@@ -40,8 +40,8 @@ reportControllers.controller('EditReportCtrl', [ '$scope', '$http', '$routeParam
 
 		$scope.save = function() {
 			$http.put('reports/' + $routeParams.reportId, $scope.report)
-					.success(function(data, status) {
-						//
-					});
+				.success(function(data, status) {
+					//
+				});
 		};
 	} ]);
