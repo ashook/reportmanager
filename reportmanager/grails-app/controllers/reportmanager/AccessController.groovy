@@ -17,7 +17,7 @@ class AccessController {
 		}
 		String ldapUrl = grailsApplication.config.getProperty("ldapserver.url");
 		String domains = grailsApplication.config.getProperty("ldapserver.domains");
-		boolean isUservalid = LdapAuthService.INSTANCE.authenticateUser(ldapUrl, domains, params.username, params.password)
+		boolean isUservalid = LdapAuthService.INSTANCE.authenticateUser(ldapUrl, params.username, params.password, domains)
 		if (isUservalid) {
 			UserData u = new UserData()
 			u.userName=params.username
